@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Spelling and Grammar Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Enhanced Spelling and Grammar Checker</h1>
+        
+        <div class="main-content">
+            <div class="editor-container">
+                <h2>Your Text</h2>
+                <textarea id="text-input" class="editor" rows="15" placeholder="Enter text here..."></textarea>
+            </div>
+            <div class="editor-container">
+                <h2>Corrected Text</h2>
+                <div id="corrected-text" class="editor" contenteditable="true">
+                    <div id="loading-spinner" class="loader" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="quick-check">Quick Check</button>
+            <button id="deep-check">Deep Check</button>
+            <button id="export">Export to .txt</button>
+        </div>
+
+        <div id="result-container">
+            <h2>Identified Issues</h2>
+            <div id="issues-list"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 
